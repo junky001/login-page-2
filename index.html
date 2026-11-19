@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Welcome Back</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="background-glow glow-three"></div>
+
+    <main class="login-container">
+
+        <div class="login-card">
+
+            <!-- User Icon -->
+            <div class="profile-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <!-- Tabs -->
+            <div class="auth-tabs">
+                <button class="tab active" type="button">Sign In</button>
+                <button class="tab" type="button" id="registerTab">
+                    Register
+                </button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <span class="input-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <span class="input-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="toggle-password"
+                        id="togglePassword"
+                        aria-label="Show password"
+                    >
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+
+                <!-- Remember Me -->
+                <div class="form-options">
+
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="custom-checkbox"></span>
+                        Remember Me
+                    </label>
+
+                    <a href="#" id="forgotPassword">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+                <!-- Sign In Button -->
+                <button type="submit" class="signin-btn" id="signinBtn">
+                    <span>Sign In</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <!-- Message -->
+                <p id="loginMessage" class="message" aria-live="polite"></p>
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span></span>
+                    <p>or</p>
+                    <span></span>
+                </div>
+
+                <!-- Register Link -->
+                <p class="register-text">
+                    Don't have an account?
+                    <a href="#" id="registerLink">Register</a>
+                </p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

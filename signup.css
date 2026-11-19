@@ -1,0 +1,448 @@
+
+/* ==========================
+   SIGNUP CONTAINER
+=========================== */
+
+.signup-container {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+/* ==========================
+   SIGNUP CARD
+=========================== */
+
+.signup-card {
+    width: 100%;
+    position: relative;
+
+    padding: 65px 25px 30px;
+
+    border-radius: 28px;
+
+    background: rgba(7, 17, 52, 0.82);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(0, 195, 255, 0.8);
+
+    box-shadow:
+        0 0 15px rgba(0, 174, 255, 0.5),
+        0 0 40px rgba(0, 94, 255, 0.25),
+        inset 0 0 20px rgba(0, 140, 255, 0.08);
+
+    animation: cardAppear 0.8s ease;
+}
+
+/* ==========================
+   BACK BUTTON
+=========================== */
+
+.back-button {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid rgba(0, 200, 255, 0.5);
+    border-radius: 50%;
+
+    background: rgba(0, 120, 255, 0.15);
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #087dff;
+    box-shadow: 0 0 15px #00cfff;
+    transform: translateX(-3px);
+}
+
+/* ==========================
+   PROFILE ICON
+=========================== */
+
+.signup-profile-icon {
+    width: 85px;
+    height: 85px;
+
+    position: absolute;
+    top: -42px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #071c49,
+        #030a28
+    );
+
+    border: 2px solid #00d9ff;
+
+    color: white;
+    font-size: 30px;
+
+    box-shadow:
+        0 0 15px #00cfff,
+        0 0 35px rgba(0, 170, 255, 0.5);
+}
+
+/* ==========================
+   HEADING
+=========================== */
+
+.signup-heading {
+    text-align: center;
+    margin-bottom: 23px;
+}
+
+.signup-heading h2 {
+    font-size: 21px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.signup-heading p {
+    font-size: 11px;
+    color: #aebfe5;
+}
+
+/* ==========================
+   INPUT GROUPS
+=========================== */
+
+.signup-input-group {
+    height: 48px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    margin-bottom: 13px;
+
+    border-radius: 11px;
+
+    background: rgba(1, 8, 31, 0.65);
+
+    border: 1px solid rgba(110, 159, 255, 0.3);
+
+    transition: 0.3s ease;
+}
+
+.signup-input-group:focus-within {
+    border-color: #00cfff;
+
+    box-shadow:
+        0 0 10px rgba(0, 207, 255, 0.5),
+        inset 0 0 8px rgba(0, 207, 255, 0.1);
+}
+
+.signup-input-icon {
+    width: 43px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #d9e9ff;
+    font-size: 15px;
+
+    border-right: 1px solid rgba(110, 159, 255, 0.15);
+}
+
+.signup-input-group input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+
+    padding: 0 11px;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+}
+
+.signup-input-group input::placeholder {
+    color: #aebbd5;
+}
+
+/* ==========================
+   PASSWORD VISIBILITY
+=========================== */
+
+.signup-toggle-password {
+    width: 40px;
+    height: 100%;
+
+    border: none;
+    background: transparent;
+
+    color: #dceaff;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.signup-toggle-password:hover {
+    color: #00d9ff;
+}
+
+/* ==========================
+   PASSWORD STRENGTH
+=========================== */
+
+.password-strength {
+    margin-top: -3px;
+    margin-bottom: 14px;
+}
+
+.strength-bar {
+    height: 4px;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.strength-bar span {
+    display: block;
+
+    width: 0%;
+    height: 100%;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+#strengthProgress.weak {
+    width: 25%;
+    background: #ff4d6d;
+}
+
+#strengthProgress.fair {
+    width: 50%;
+    background: #ffb347;
+}
+
+#strengthProgress.good {
+    width: 75%;
+    background: #00cfff;
+}
+
+#strengthProgress.strong {
+    width: 100%;
+    background: #42ffad;
+}
+
+.password-strength p {
+    font-size: 9px;
+    color: #aebbd5;
+    margin-top: 5px;
+}
+
+/* ==========================
+   TERMS CHECKBOX
+=========================== */
+
+.terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin: 17px 0 20px;
+
+    font-size: 10px;
+    color: #d9e9ff;
+
+    cursor: pointer;
+}
+
+.terms-checkbox input {
+    accent-color: #00cfff;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.terms-checkbox a {
+    color: #00dfff;
+    text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================
+   CREATE ACCOUNT BUTTON
+=========================== */
+
+.create-account-btn {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        100deg,
+        #a000ff,
+        #286bff,
+        #00d9ff
+    );
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 13px;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 18px rgba(0, 183, 255, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.create-account-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(0, 207, 255, 0.7);
+}
+
+.create-account-btn:active {
+    transform: scale(0.98);
+}
+
+.create-account-btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+/* ==========================
+   SIGNUP MESSAGE
+=========================== */
+
+.signup-message {
+    text-align: center;
+
+    font-size: 10px;
+
+    min-height: 15px;
+
+    margin-top: 12px;
+}
+
+.signup-message.success {
+    color: #54ffbd;
+}
+
+.signup-message.error {
+    color: #ff6b8a;
+}
+
+/* ==========================
+   ALREADY HAVE ACCOUNT
+=========================== */
+
+.already-account {
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #e2eaff;
+
+    margin-top: 17px;
+}
+
+.already-account a {
+    color: #00dfff;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.already-account a:hover {
+    color: #bd75ff;
+    text-shadow: 0 0 8px #00dfff;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width: 480px) {
+
+    .signup-container {
+        max-width: 390px;
+    }
+
+    .signup-card {
+        padding: 62px 20px 28px;
+        border-radius: 23px;
+    }
+
+    .signup-profile-icon {
+        width: 78px;
+        height: 78px;
+        top: -39px;
+        font-size: 27px;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .signup-card {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .signup-heading h2 {
+        font-size: 18px;
+    }
+
+}

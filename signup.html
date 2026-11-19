@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | Register</title>
+
+    <!-- Reuse Login Styles -->
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Signup Styles -->
+    <link rel="stylesheet" href="signup.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="background-glow glow-three"></div>
+
+
+    <main class="signup-container">
+
+        <div class="signup-card">
+
+            <!-- Back Button -->
+            <a href="index.html" class="back-button" aria-label="Back to login">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+
+
+            <!-- Profile Icon -->
+            <div class="signup-profile-icon">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+
+
+            <!-- Heading -->
+            <div class="signup-heading">
+
+                <h2>Create Account</h2>
+
+                <p>Join us today and get started!</p>
+
+            </div>
+
+
+            <!-- Signup Form -->
+            <form id="signupForm">
+
+
+                <!-- Full Name -->
+                <div class="signup-input-group">
+
+                    <span class="signup-input-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Full Name"
+                        autocomplete="name"
+                        minlength="2"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="signup-input-group">
+
+                    <span class="signup-input-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="Email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="signup-input-group">
+
+                    <span class="signup-input-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="Password"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="signup-toggle-password"
+                        data-target="signupPassword"
+                        aria-label="Show password"
+                    >
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="signup-input-group">
+
+                    <span class="signup-input-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm Password"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="signup-toggle-password"
+                        data-target="confirmPassword"
+                        aria-label="Show password"
+                    >
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Password Strength -->
+                <div class="password-strength">
+
+                    <div class="strength-bar">
+                        <span id="strengthProgress"></span>
+                    </div>
+
+                    <p id="strengthText">Password strength</p>
+
+                </div>
+
+
+                <!-- Terms -->
+                <label class="terms-checkbox">
+
+                    <input type="checkbox" id="agreeTerms" required>
+
+                    <span>
+                        I agree to the
+                        <a href="#" id="termsLink">Terms & Conditions</a>
+                    </span>
+
+                </label>
+
+
+                <!-- Create Account Button -->
+                <button
+                    type="submit"
+                    class="create-account-btn"
+                    id="createAccountBtn"
+                >
+
+                    <span>Create Account</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <!-- Feedback -->
+                <p id="signupMessage" class="signup-message" aria-live="polite"></p>
+
+
+                <!-- Login Link -->
+                <div class="already-account">
+
+                    Already have an account?
+
+                    <a href="index.html">Sign In</a>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script src="signup.js"></script>
+
+</body>
+
+</html>
